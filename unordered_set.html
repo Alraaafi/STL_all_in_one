@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.css">
+	
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background-color: #0d1117;
+        }
+        pre{
+            padding-top:0 !important;
+            margin-top:0 !important;
+        }
+        code{
+            padding-top:0 !important;
+            margin-top:0 !important;
+        }
+    </style>
+</head>
+<body>
+	<pre><code class="language-cpp">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    unordered_set&lt;int&gt; s;
+    s.insert(10);
+    s.insert(8);
+    s.insert(1);
+    s.insert(2);
+    s.insert(10);             // {10,8,1,2}
+    cout &lt;&lt; s.size() &lt;&lt; endl; // returns 4
+
+    auto it = s.find(8);
+    if (it != s.end())
+        cout &lt;&lt; "Present" &lt;&lt; endl;    // Present
+
+    int count = s.count(1); 
+    cout &lt;&lt; count &lt;&lt; endl;    // 1
+
+    for (auto it = s.begin(); it != s.end(); it++)
+        cout &lt;&lt; *it &lt;&lt; endl;    // {2, 1, 8, 10}
+
+    s.clear();
+    if (s.empty())
+        cout &lt;&lt; "Yes" &lt;&lt; endl;
+    else
+        cout &lt;&lt; "No" &lt;&lt; endl;   // Yes
+    return 0;
+}
+</code>
+    </pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
